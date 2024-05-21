@@ -6,4 +6,11 @@ public class player {
     public boolean isBust;
 
     public Card[] hand ;
+
+    public player(){
+
+    }
+    public void print(){
+        
+    }
 }
