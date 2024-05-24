@@ -5,12 +5,23 @@ public class player {
 
     public boolean isBust;
 
-    public Card[] hand ;
+    public Card[] hand;
 
-    public player(){
+
+    public player(boolean pIsDealer, int pCardsSum, boolean pisBust) {
+        isDealer = pIsDealer;
+        cardssum = pCardsSum;
+        isBust = pisBust;
+        hand = new Card[2];
 
     }
-    public void print(){
-        
+
+    public void print() {
+        if (isDealer) {
+            System.out.println("the dealer has"+ cardssum+ "prints");
+        } else {
+            System.out.println("the player has" + cardssum + "prints");
+        }
+        ///TODO; print the hand
     }
 }
