@@ -18,10 +18,12 @@ public class player {
 
     public void print() {
         if (isDealer) {
-            System.out.println("the dealer has"+ cardssum+ "prints");
+            System.out.println("the dealer has" + cardssum + "prints");
         } else {
             System.out.println("the player has" + cardssum + "prints");
         }
-        ///TODO; print the hand
+        for (int i = 0; i < hand.length; i++) {
+            hand[i].print();
+        }
     }
 }

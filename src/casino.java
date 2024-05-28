@@ -2,6 +2,8 @@ public class casino {
 
     public Card aceofHearts;
     public Card[] Deck;
+    public player Jai;
+    public player Dealer;
 
     public static void main(String[] args) {
         casino x = new casino();
@@ -23,6 +25,26 @@ public class casino {
         }
         shuffle();
         printdeck();
+
+
+        Jai = new player(false,0,false);
+
+
+        Dealer = new player(false,0,false);
+        Deal();
+        Jai.print();
+        Dealer.print();
+    }
+
+
+    public void Deal(){
+        Jai.hand[0] = Deck[0];
+
+        Jai.hand[1]=Deck[1];
+        Jai.cardssum= Jai.hand[1].value +Jai.hand[0].value;
+        Dealer.hand[0]=Deck[2];
+        Dealer.hand[1]=Deck[3];
+
     }
 
     public void printdeck() {
