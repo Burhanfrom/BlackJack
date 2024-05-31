@@ -49,7 +49,13 @@ public class casino {
        if(name.equals("hit")){
            //code for hit
            System.out.println("you chose to hit");
-
+           System.out.println("your new card");
+           Deck[4].print();
+           Jai.cardssum= Deck[4].value +Jai.cardssum;
+            Jai.print();
+            if( Jai.cardssum>21){
+               System.out.println("You have been Busted");
+            }
 
 
        } else{
