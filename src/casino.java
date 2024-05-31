@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class casino {
 
     public Card aceofHearts;
@@ -34,6 +36,27 @@ public class casino {
         Deal();
         Jai.print();
         Dealer.print();
+
+        //Source;https://www.theserverside.com/tutorial/How-Javas-Systemin-reads-input-from-the-user
+        System.out.println("Do you want to Hit or Stay");
+
+        Scanner scanner = new Scanner(System.in);
+
+        String name = scanner.nextLine();
+
+        System.out.println(name + " is a great choice");
+
+       if(name.equals("hit")){
+           //code for hit
+           System.out.println("you chose to hit");
+
+
+
+       } else{
+           //code for stand
+           System.out.println("you chose to stand");
+       }
+
     }
 
 
