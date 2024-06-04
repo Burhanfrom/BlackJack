@@ -32,35 +32,44 @@ public class casino {
         Jai = new player(false,0,false);
 
 
-        Dealer = new player(false,0,false);
+        Dealer = new player(true,0,false);
         Deal();
         Jai.print();
         Dealer.print();
 
         //Source;https://www.theserverside.com/tutorial/How-Javas-Systemin-reads-input-from-the-user
-        System.out.println("Do you want to Hit or Stay");
 
-        Scanner scanner = new Scanner(System.in);
+        String name = "";
+       while(!name.equals("stand")){
+           System.out.println("Do you want to Hit or Stay");
 
-        String name = scanner.nextLine();
+           Scanner scanner = new Scanner(System.in);
 
-        System.out.println(name + " is a great choice");
+           name = scanner.nextLine();
 
-       if(name.equals("hit")){
-           //code for hit
-           System.out.println("you chose to hit");
-           System.out.println("your new card");
-           Deck[4].print();
-           Jai.cardssum= Deck[4].value +Jai.cardssum;
-            Jai.print();
-            if( Jai.cardssum>21){
-               System.out.println("You have been Busted");
-            }
+           System.out.println(name + " is a great choice");
+           if(name.equals("hit")) {
+               //code for hit
+               System.out.println("you chose to hit");
+               System.out.println("your new card");
+               Deck[4].print();
+               Jai.cardssum = Deck[4].value + Jai.cardssum;
+               Jai.print();
+               if (Jai.cardssum > 21) {
+                   System.out.println("You have been Busted");
+               }
+           }
 
-
-       } else{
+       }
            //code for stand
            System.out.println("you chose to stand");
+       if(Dealer.cardssum<17){
+           Dealer.cardssum = Deck[5].value + Dealer.cardssum;
+
+       }
+Dealer.print();
+       if(Dealer.cardssum>21){
+           System.out.println("The dealer has Busted");
        }
 
     }
@@ -73,6 +82,7 @@ public class casino {
         Jai.cardssum= Jai.hand[1].value +Jai.hand[0].value;
         Dealer.hand[0]=Deck[2];
         Dealer.hand[1]=Deck[3];
+        Dealer.cardssum= Dealer.hand[1].value +Dealer.hand[0].value;
 
     }
 

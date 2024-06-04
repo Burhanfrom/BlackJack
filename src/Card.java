@@ -17,35 +17,39 @@ public Card(int pname,int psuit){
     name="Ace";
 }
     if(pname == 1) {
+        value = 1;
+        name = "One";
+    }
+    if(pname == 2) {
         value = 2;
         name = "Two";
     }
         if(pname == 3) {
-            value = 4;
+            value = 3;
             name = "three";
         }
     if(pname == 4) {
-        value = 5;
+        value = 4;
         name = "four";
     }
     if(pname == 5) {
-        value = 6;
+        value = 5;
         name = "five";
     }
     if(pname == 6) {
-        value = 7;
+        value = 6;
         name = "six";
     }
     if(pname == 7) {
-        value = 8;
+        value = 7;
         name = "seven";
     }
     if(pname == 8) {
-        value = 9;
+        value = 8;
         name = "eight";
     }
     if(pname == 9) {
-        value = 10;
+        value = 9;
         name = "nine";
     }
     if(pname == 10) {
